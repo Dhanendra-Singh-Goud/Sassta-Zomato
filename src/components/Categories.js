@@ -3,6 +3,7 @@ import React from 'react'
 import { FontAwesome5 } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons';
+import { MaterialIcons } from '@expo/vector-icons';
 
 
 const Categories = () => {
@@ -12,33 +13,33 @@ const Categories = () => {
 
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
         <View style={styles.box}>
-        <FontAwesome5 name="hamburger" size={24} color="black" style={styles.icon} />
-        <Text style={styles.text}>Burger</Text>
+        <MaterialCommunityIcons name="noodles" size={24} color="black" style={styles.icon} />
+        <Text style={styles.text}>BreakFast</Text>
         </View>
 
         <View style={styles.box}>
-        <FontAwesome5 name="pizza-slice" size={24} color="black" />
-        <Text style={styles.text}>Pizza</Text>
+        <FontAwesome5 name="pizza-slice" size={24} color="black" style={styles.icon} />
+        <Text style={styles.text}>Starters</Text>
         </View>
 
         <View style={styles.box}>
-        <MaterialCommunityIcons name="noodles" size={24} color="black" />
-        <Text style={styles.text}>Noodles</Text>
+        <MaterialIcons name="lunch-dining" size={24} color="black" style={styles.icon}  />
+        <Text style={styles.text}>Lunch</Text>
         </View>
 
         <View style={styles.box}>
-        <MaterialCommunityIcons name="food-fork-drink" size={24} color="black" /> 
-        <Text style={styles.text}>Khana Khajana</Text>
+        <MaterialIcons name="dinner-dining" size={24} color="black" style={styles.icon} /> 
+        <Text style={styles.text}>Dinner</Text>
         </View>
 
         <View style={styles.box}>
-        <Entypo name="drink" size={24} color="black"  />
+        <Entypo name="drink" size={24} color="black" style={styles.icon}  />
         <Text style={styles.text}>Mojito Coctails</Text>
         </View>
 
         <View style={styles.box}>
-        <FontAwesome5 name="hamburger" size={24} color="black" style={styles.icon} />
-        <Text style={styles.text}>Burger</Text>
+        <MaterialCommunityIcons name="cupcake" size={24} color="black" style={styles.icon} />
+        <Text style={styles.text}>Desert</Text>
         </View>
 
       </ScrollView>
@@ -51,17 +52,16 @@ export default Categories
 const styles = StyleSheet.create({
   container:{
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-    width:'90%',
+    width:'100%',
     borderRadius:12,
     elevation:15,
+    marginHorizontal:5,
   },
   head:{
     fontSize:25,
     fontWeight:'600',
     color:`#dc143c`,
-    textAlign:'center',
+    alignSelf:'center',
     marginBottom:6,
     paddingBottom:6,
     borderBottomWidth:1,
@@ -75,12 +75,13 @@ const styles = StyleSheet.create({
     borderRadius:12,
     shadowColor: '#000',
     alignItems:'center',
-    width:90,
-    height:65,
-    justifyContent:'center'
-
+    // width:90,
+    // height:65,
+    justifyContent:'center',
+    flexDirection: 'row',
   },
+ 
   icon:{
-
+    marginRight:10
   }
 })
